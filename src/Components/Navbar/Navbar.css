@@ -23,7 +23,7 @@
   align-items: center;
   gap: 50px;
   font-size: 18px;
-  color: crimson;
+
   font-weight: 400;
 }
 
@@ -36,7 +36,12 @@
   gap: 10px;
 }
 
-.navbar-menu li:hover {
+.navbar-menu li a {
+  text-decoration: none;
+  color: crimson;
+}
+
+.navbar-menu li a:hover {
   color: rgb(182, 141, 149);
   transition: all 0.5s ease;
 }
