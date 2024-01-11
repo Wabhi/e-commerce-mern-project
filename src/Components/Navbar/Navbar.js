@@ -1,7 +1,8 @@
-import React from 'react'
-import "./Navbar.css"
+import React from "react";
+import "./Navbar.css";
 import logo from "../Assets/logo.png";
-import cart_logo from "../Assets/cart_icon.png"
+import cart_logo from "../Assets/cart_icon.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,18 +12,28 @@ const Navbar = () => {
         <p>SHOPPER</p>
       </div>
       <ul className="navbar-menu">
-        <li>SHOP</li>
-        <li>MEN</li>
-        <li>WOMEN</li>
-        <li>KIDS</li>
+        <li>
+          <Link to="/">SHOP</Link>
+        </li>
+        <li>
+          <Link to="/men">MEN</Link>
+        </li>
+        <li>
+          <Link to="/women">WOMEN</Link>
+        </li>
+        <li>
+          <Link to="/kids">KIDS</Link>
+        </li>
       </ul>
       <div className="navbar-login">
-        <button>LOGIN</button>
-        <img src={cart_logo} alt='login-cart'></img>
-       <div className="navbar-cart-count">0</div>
+        <Link to="/login">
+          <button>LOGIN</button>
+        </Link>
+        <img src={cart_logo} alt="login-cart"></img>
+        <div className="navbar-cart-count">0</div>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
