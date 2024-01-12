@@ -3,6 +3,11 @@
   justify-content: space-around;
   padding: 10px;
   box-shadow: 0px 1px 3px -2px black;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: rgb(217, 217, 245);
+  /* background: rgb(221, 217, 218); */
 }
 
 .navbar-logo {
@@ -43,7 +48,7 @@
 
 .navbar-menu li a:hover {
   color: rgb(182, 141, 149);
-  transition: all 0.5s ease;
+  transition: all 0.9s ease-in-out;
 }
 
 .navbar-login {

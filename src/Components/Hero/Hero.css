@@ -50,6 +50,8 @@
   font-size: 22px;
   font-weight: 500;
   border-radius: 75px;
+  border: none;
+  outline: none;
 }
 
 .hero-latest-btn:active {
