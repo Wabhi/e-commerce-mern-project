@@ -1,0 +1,38 @@
+.description-box {
+  margin: 40px 60px;
+}
+.description-box-navigator {
+  display: flex;
+  gap: 30px;
+}
+.description-box-nav {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid crimson;
+}
+
+.description-box-nav:hover {
+  background: rgb(223, 211, 213);
+  border: 1px solid black;
+  transition: all 0.8sec ease;
+}
+
+.description-box-details {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid crimson;
+  padding: 20px;
+}
+
+.description-box-details:hover {
+  background: rgb(246, 234, 237);
+  border: 1px solid black;
+  transition: all 0.8sec ease;
+}

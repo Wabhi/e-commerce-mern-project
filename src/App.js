@@ -13,6 +13,7 @@ import women_banner from "../src/Components/Assets/banner_women.png";
 import kids_banner from "../src/Components/Assets/banner_kids.png";
 
 function App() {
+
   return (
     <div>
       <BrowserRouter>
@@ -34,7 +35,7 @@ function App() {
           <Route path="/" element={<Shop />} />
           <Route path="/login" element={<LoginSignup />} />
           <Route path="/product" element={<Product />}>
-            <Route path=":productId" element={<Product />} />
+            <Route path=":productId/:ProductName" element={<Product />} />
           </Route>
           <Route path="/shopping-cart" element={<ShopCart />} />
           <Route path="*" element={<PageNotFound />} />
