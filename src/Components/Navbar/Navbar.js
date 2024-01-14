@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="navbar-logo">
+      <div className="navbar-logo" onClick={window.scrollTo(0,0)}>
         <img src={logo} alt="logo"></img>
         <p>DRESSUP</p>
       </div>

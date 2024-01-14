@@ -1,0 +1,16 @@
+.breadcrum{
+    display: flex;
+    text-align: center;
+    margin: 50px 56px;
+    color: #5e5e5e;
+    font-size:14px;
+    gap: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.breadcrum:hover{
+    color: rgb(207, 154, 165);
+    transition: all 0.8s ease;
+}
