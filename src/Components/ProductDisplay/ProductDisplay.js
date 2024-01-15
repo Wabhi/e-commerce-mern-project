@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./ProductDisplay.css"
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
+import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
 const {product} = props;
+const { addCartItem } = useContext(ShopContext); 
   return (
     <div className="product-display">
       <div className="product-display-left">
@@ -30,7 +32,7 @@ const {product} = props;
           <img src={star_icon} alt="star-icon" />
           <img src={star_icon} alt="star-icon" />
           <img src={star_dull_icon} alt="star-icon" />
-          <p>({(122)})</p>
+          <p>({122})</p>
         </div>
         <div className="product-display-right-prices">
           <div className="product-display-right-old-price">
@@ -56,11 +58,15 @@ const {product} = props;
             <div>XXL</div>
           </div>
         </div>
-        <button class="add-to-cart">ADD TO CART</button>
+        <button className="add-to-cart" onClick={() => addCartItem(product.id)}>
+          ADD TO CART
+        </button>
         <p className="product-display-right-category">
-          <span>Category : </span> Woment, TShirt, Cap
+          <span className="category">Category : </span> Woment, TShirt, Cap
         </p>
-        <p><span>Tags : </span>Jeans, Tshirt, Trouser, Hat</p>
+        <p>
+          <span className="tags">Tags : </span>Jeans, Tshirt, Trouser, Hat
+        </p>
       </div>
     </div>
   );

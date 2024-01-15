@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_logo from "../Assets/cart_icon.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
+  const { getTotalCartItems } = useContext(ShopContext);
+  const navigate = useNavigate();
+
+  const handleAddToCartPage = () => {
+    navigate("/shopping-cart");
+  };
   return (
     <div className="navbar">
-      <div className="navbar-logo" onClick={window.scrollTo(0,0)}>
+      <div className="navbar-logo" onClick={window.scrollTo(0, 0)}>
         <img src={logo} alt="logo"></img>
         <p>DRESSUP</p>
       </div>
@@ -29,8 +36,13 @@ const Navbar = () => {
         <Link to="/login">
           <button>LOGIN</button>
         </Link>
-        <img src={cart_logo} alt="login-cart"></img>
-        <div className="navbar-cart-count">0</div>
+
+        <img
+          src={cart_logo}
+          alt="login-cart"
+          onClick={handleAddToCartPage}
+        ></img>
+        <div className="navbar-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );

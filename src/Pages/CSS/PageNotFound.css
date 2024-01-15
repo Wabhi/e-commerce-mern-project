@@ -1,0 +1,37 @@
+.page-not-found {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-not-found-heading{
+    font-size: 45px;
+    color: chocolate;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.back-to-shop{
+  display: flex;
+  background: #ff4141;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 70px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 75px;
+  border: none;
+  outline: none;
+  margin-top: 50px;
+}
+
+.back-to-shop:active {
+  background: #e39595;
+}

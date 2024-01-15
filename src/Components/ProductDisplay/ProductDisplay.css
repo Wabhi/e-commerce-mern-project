@@ -95,6 +95,17 @@
   margin-bottom: 50px;
 }
 
+.add-to-cart:active{
+  background: rgb(219, 195, 200);
+  transition: all 0.8s all;
+}
+
 .product-display-right-old-price{
     text-decoration: line-through ! important;
+}
+
+.tags, .category{
+  color: #252525;
+  font-size: 18px;
+  font-weight: 600;
 }
